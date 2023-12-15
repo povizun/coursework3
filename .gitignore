@@ -2,3 +2,6 @@ venv/
 .idea
 *.pyc
 *.log
+*.lock
+.pytest_cache
+.coverage
