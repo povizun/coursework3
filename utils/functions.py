@@ -15,7 +15,8 @@ def get_list_of_last_ops(list_of_ops: list, num_of_last: int):
 
     for operation in list_of_ops:
         try:
-            list_of_dates.append(operation["date"])
+            if operation["state"] == "EXECUTED":
+                list_of_dates.append(operation["date"])
         except KeyError:
             pass
     list_of_dates.sort()
