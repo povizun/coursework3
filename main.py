@@ -1,7 +1,8 @@
 from utils.functions import get_list_of_ops, get_list_of_last_ops
 from utils.Operation import Operation
+import config
 
-operations = get_list_of_ops("operations.json")
+operations = get_list_of_ops(config.ROOT_DIR + "/operations.json")
 final_message = ""
 if operations != "Файл не найден":
     num_of_last = 5
